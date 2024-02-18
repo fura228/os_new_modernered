@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{%block content %}
+<h1>{{ body_title }}</h1>
+<ul>
+    {% for contact in contacts %}
+    <li>
+        <h2>{{contact.user}}: {{contact.phone}}</h2>
+        <p><i>{{contact.email}}</i></p>
+        {% if not forloop.last %}
+        <hr>
+        {% endif %}
+    </li>
+    {% endfor %}
+</ul>
+{% include "babka/includes/footer.html" %}
+{% endblock %}

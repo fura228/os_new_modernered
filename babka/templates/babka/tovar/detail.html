@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% include "blog/includes/header.html"%}
+<h1>{{ tovar.title }}</h1>
+<div>
+    <p>{{ tovar.author}} {{tovar.publish }}</p>
+</div>
+<p>{{ tovar.body }} {{ tovar.cost }}</p>
+{% include "babka/includes/footer.html"%}
+{% endblock %}
